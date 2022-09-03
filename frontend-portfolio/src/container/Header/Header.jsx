@@ -3,6 +3,8 @@ import { motion } from "framer-motion"
 import { images } from "../../constants"
 import "./Header.scss"
 
+import AppWrap from "../../wrapper/AppWrap"
+
 const scaleVariants = {
   whileInView: {
     scale: [0, 1],
@@ -22,13 +24,13 @@ const Header = () => (
           <span>👋</span>
           <div style={{ marginLeft: 20 }}>
             <p className="p-text">Hello, I am</p>
-            <h1 className="head-text">Micael</h1>
+            <h1 className="head-text">Vinoth Periyasamy</h1>
           </div>
         </div>
 
         <div className="tag-cmp app__flex">
-          <p className="p-text">Web Developer</p>
-          <p className="p-text">Freelancer</p>
+          <p className="p-text">Fullstack Developer</p>
+          <p className="p-text">Software Enginner</p>
         </div>
       </div>
     </motion.div>
@@ -39,7 +41,7 @@ const Header = () => (
     </motion.div>
 
     <motion.div variants={scaleVariants} whileInView={scaleVariants.whileInView} className="app__header-circles">
-      {[images.flutter, images.redux, images.sass].map((circle, index) => (
+      {[images.javascript, images.react, images.redux].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
         </div>
@@ -48,4 +50,4 @@ const Header = () => (
   </div>
 )
 
-export default Header
+export default AppWrap(Header, "home")
