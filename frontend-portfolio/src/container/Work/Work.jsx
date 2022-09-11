@@ -3,7 +3,7 @@ import { AiFillEye, AiFillGithub } from "react-icons/ai"
 import { motion } from "framer-motion"
 import { images } from "../../constants"
 
-import { AppWrap } from "../../wrapper"
+import { AppWrap, MotionWrap } from "../../wrapper"
 import "./Work.scss"
 const data = [{ title: "IDB Project", description: "To show demo to customers", projectLink: "https://www.abc.com", codeLink: "https://www.abc.com", imgUrl: images.react, tags: ["React JS", "All"] }]
 
@@ -87,4 +87,4 @@ const Work = () => {
   )
 }
 
-export default AppWrap(Work, "work")
+export default AppWrap(MotionWrap(Work, "app__works"), "work", "app_primarybg")

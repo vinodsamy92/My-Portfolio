@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 import { images } from "../../constants"
 import "./About.scss"
 
-import AppWrap from "../../wrapper/AppWrap"
+import { AppWrap, MotionWrap } from "../../wrapper"
 
 const About = () => {
   const abouts = [
@@ -14,7 +14,7 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        I Know that <span>Good Design</span> <br />
+        I Know that <span>Good Development</span> <br />
         means <span>Good Business</span>
       </h2>
 
@@ -35,4 +35,4 @@ const About = () => {
   )
 }
 
-export default AppWrap(About, "about")
+export default AppWrap(MotionWrap(About, "app__about"), "about", "app__whitebg")
