@@ -7,9 +7,9 @@ import { AppWrap, MotionWrap } from "../../wrapper"
 
 const About = () => {
   const abouts = [
-    { title: "FE", description: "takecare of the UI and their functionalities", imgUrl: images.about01 },
-    { title: "BE", description: "takecare of the UI and their functionalities", imgUrl: images.about02 },
-    { title: "UI/UX", description: "takecare of the UI and their functionalities", imgUrl: images.about03 },
+    { title: "Front-End", description: "takecare of the UI and their functionalities", imgUrl: images.about01 },
+    { title: "Backend", description: "takecare of the UI and their functionalities", imgUrl: images.about02 },
+    { title: "DataBase", description: "takecare of the UI and their functionalities", imgUrl: images.about03 },
   ]
   return (
     <>

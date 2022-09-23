@@ -34,8 +34,27 @@ import bolt from "../assets/bolt.png"
 import nb from "../assets/nb.png"
 import skype from "../assets/skype.png"
 import spotify from "../assets/spotify.png"
+import angular from "../assets/angular.png"
+import cordova2 from "../assets/cordova2.png"
+import IDB_chome from "../assets/IDB-chrome.png"
+import adobe from "../assets/adobe.png"
+import ibm from "../assets/IBM.png"
+import cityOfWest from "../assets/cw.png"
+import accenture from "../assets/accenture.png"
+import adobe1 from "../assets/adobe1.png"
+import cordovaAdobe from "../assets/cordova-adobe.png"
+import vinoth from "../assets/vinoth3.png"
 
 export default {
+  angular,
+  IDB_chome,
+  adobe,
+  ibm,
+  cityOfWest,
+  accenture,
+  cordovaAdobe,
+  adobe1,
+  vinoth,
   email,
   mobile,
   api,
@@ -69,4 +88,5 @@ export default {
   nb,
   skype,
   spotify,
+  cordova2,
 }

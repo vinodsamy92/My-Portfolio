@@ -5,21 +5,38 @@ import { images } from "../../constants"
 
 import { AppWrap, MotionWrap } from "../../wrapper"
 import "./Work.scss"
-const data = [{ title: "IDB Project", description: "To show demo to customers", projectLink: "https://www.abc.com", codeLink: "https://www.abc.com", imgUrl: images.react, tags: ["React JS", "All"] }]
+let data = [
+  {
+    title: "Interactive Demo Builder",
+    description: "The project we developed for Adobe in 2019, 2020 and 2021 is called Interactive Demo Builder. It is a tool that allows Adobe to create interactive demos for their products.",
+    projectLink: "https://www.abc.com",
+    codeLink: "https://www.abc.com",
+    imgUrl: images.adobe,
+    tags: ["Web App", "All"],
+  },
+  {
+    title: "IDB Trigger Application",
+    description: "It is a app that allows Customers to see the demo while interactive demos for their products.",
+    projectLink: "https://www.abc.com",
+    codeLink: "https://www.abc.com",
+    imgUrl: images.cordovaAdobe,
+    tags: ["Mobile App", "All"],
+  },
+  {
+    title: "Chrome extension",
+    description: "The core of IDB is a Chrome extension that allows Adobe partners to simulate the power of Adobe Platform in the live website of their potential customer.",
+    projectLink: "https://www.abc.com",
+    codeLink: "https://www.abc.com",
+    imgUrl: images.adobe1,
+    tags: ["Web App", "All"],
+  },
+]
 
 const Work = () => {
   const [works, setWorks] = useState(data)
   const [activeFilter, setActiveFilter] = useState("All")
+  const [filterWork, setFilterWork] = useState(data)
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 })
-
-  // useEffect(() => {
-  //   const query = '*[_type == "works"]'
-
-  //   client.fetch(query).then((data) => {
-  //     setWorks(data)
-  //     setFilterWork(data)
-  //   })
-  // }, [])
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item)
@@ -27,11 +44,10 @@ const Work = () => {
 
     setTimeout(() => {
       setAnimateCard([{ y: 0, opacity: 1 }])
-
       if (item === "All") {
-        setWorks(works)
+        setFilterWork(works)
       } else {
-        setWorks(works.filter((work) => work.tags.includes(item)))
+        setFilterWork(works.filter((work) => work.tags.includes(item)))
       }
     }, 500)
   }
@@ -43,7 +59,7 @@ const Work = () => {
       </h2>
 
       <div className="app__work-filter">
-        {["UI/UX", "Web App", "Mobile App", "React JS", "All"].map((item, index) => (
+        {["Web App", "Mobile App", "All"].map((item, index) => (
           <div key={index} onClick={() => handleWorkFilter(item)} className={`app__work-filter-item app__flex p-text ${activeFilter === item ? "item-active" : ""}`}>
             {item}
           </div>
@@ -51,7 +67,7 @@ const Work = () => {
       </div>
 
       <motion.div animate={animateCard} transition={{ duration: 0.5, delayChildren: 0.5 }} className="app__work-portfolio">
-        {works.map((work, index) => (
+        {filterWork.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div className="app__work-img app__flex">
               <img src={work.imgUrl} alt={work.name} />

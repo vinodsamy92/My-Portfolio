@@ -8,14 +8,14 @@ import "./Skills.scss"
 
 const Skills = () => {
   const experiences = [
-    { year: "2022", works: [{ name: "Nodejs Developer", company: "Photon Interactive Private Limited..", desc: "Java" }] },
+    { year: "2022", works: [{ name: "Software Engineering IV", company: "Photon Interactive Private Limited..", desc: "Java" }] },
     { year: "2019", works: [{ name: "Fullstack Developer", company: "Intellidesign", desc: "javscript" }] },
     { year: "2018", works: [{ name: "Software Developer", company: "ParallelReailty", desc: "Html,Css,Javascript" }] },
   ]
   const skills = [
     { name: "Javascript", bgColor: "#fff", icon: images.javascript },
     { name: "ReactJS", bgColor: "#fff", icon: images.react },
-    { name: "Flutter", bgColor: "#fff", icon: images.flutter },
+    { name: "Redux", bgColor: "#fff", icon: images.redux },
     { name: "NodeJS", bgColor: "#fff", icon: images.node },
   ]
 
